@@ -33,6 +33,7 @@ const simbolos = '!@%*?';
 
 geraSenha();
 
+let senha = '';
 function geraSenha() {
     let alfabeto = '';
     if (checkbox[0].checked){
@@ -48,6 +49,7 @@ function geraSenha() {
         alfabeto = alfabeto + simbolos;
     }
     console.log(alfabeto);
+
     for(let i=0; i<tamanhoSenha; i++) {
         let numeroAleatorio = Math.random()*alfabeto.length;
         numeroAleatorio = Math.floor(numeroAleatorio);
