@@ -35,10 +35,10 @@ geraSenha();
 
 function geraSenha() {
     let alfabeto = '';
-    if (checkbox [0].checked){
+    if (checkbox[0].checked){
         alfabeto = alfabeto + letrasMaiusculas;
     }
-    if (checkbox [1].checked){
+    if (checkbox[1].checked){
         alfabeto = alfabeto + letrasMinusculas;
     }
     if (checkbox[2].checked){
@@ -47,7 +47,7 @@ function geraSenha() {
     if (checkbox[3].checked){
         alfabeto = alfabeto + simbolos;
     }
-
+    console.log(alfabeto);
     for(let i=0; i<tamanhoSenha; i++) {
         let numeroAleatorio = Math.random()*alfabeto.length;
         numeroAleatorio = Math.floor(numeroAleatorio);
