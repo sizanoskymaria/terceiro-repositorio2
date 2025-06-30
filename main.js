@@ -7,17 +7,17 @@ const botoes = document.querySelectorAll('.parametro-senha__botao');
 botoes[0].onclick = diminuiTamanho;
 botoes[1].onclick = aumentaTamanho;
 
-function diminuiTamanho(){
-    if (tamanhoSenha > 1 ){
-    tamanhoSenha--;
-   } 
+function diminuiTamanho() {
+    if (tamanhoSenha > 1) {
+        tamanhoSenha--;
+    }
     numeroSenha.textContent = tamanhoSenha;
     geraSenha();
 }
 
-function aumentaTamanho(){
-    if (tamanhoSenha < 20 ){
-     tamanhoSenha++;    
+function aumentaTamanho() {
+    if (tamanhoSenha < 20){
+        tamanhoSenha++;
     }
     numeroSenha.textContent = tamanhoSenha;
     geraSenha();
@@ -33,7 +33,6 @@ const simbolos = '!@%*?';
 
 geraSenha();
 
-let senha = '';
 function geraSenha() {
     let alfabeto = '';
     if (checkbox[0].checked){
@@ -48,12 +47,12 @@ function geraSenha() {
     if (checkbox[3].checked){
         alfabeto = alfabeto + simbolos;
     }
-    console.log(alfabeto);
 
-    for(let i=0; i<tamanhoSenha; i++) {
+    let senha = '' ;
+    for(let i=0; i < tamanhoSenha; i++) {
         let numeroAleatorio = Math.random()*alfabeto.length;
         numeroAleatorio = Math.floor(numeroAleatorio);
         senha = senha + alfabeto[numeroAleatorio];
     }
-    campoSenha.value = senha;
+    campoSenha.value = senha; 
 }
